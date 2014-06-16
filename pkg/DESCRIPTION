@@ -1,0 +1,18 @@
+Package: plmcmc
+Type: Package
+Title: What the package does (short line)
+Version: 1.0
+Date: 2014-02-12
+Authors@R: person(given="Colin", family="Gillespie",
+    email="csgillespie@gmail.com", role = c("aut", "cre"))
+Maintainer: Colin Gillespie <csgillespie@gmail.com>
+Description: More about what it does (maybe more than one line)
+License: GPL-2 | GPL-3
+Roxygen: list(wrap = FALSE)
+Depends:
+    R (>= 3.0.0)
+Suggests:
+    pingr
+Imports:
+    MASS,
+    poweRlaw
