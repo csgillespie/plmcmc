@@ -15,10 +15,10 @@ Overview of the repository
 Installation
 ------------
 
-The `plmcmc` package can be install fromgithub using `devtools`
+The `plmcmc` package can be install from github using `devtools`
 ```r
 install.packages("devtools")
-library("devtools"")
+library("devtools")
 install_github("plmcmc", "csgillespie", subdir="pkg")
 ```
 
