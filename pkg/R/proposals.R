@@ -1,6 +1,7 @@
 #' Parameter proposals
 #' 
 #' @param pars model parameters
+#' @param cov_mat covariance matrix
 #' @export
 #' @importFrom MASS mvrnorm
 update_parameters = function(pars, cov_mat) UseMethod("update_parameters")

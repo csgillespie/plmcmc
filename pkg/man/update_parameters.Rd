@@ -7,6 +7,8 @@ update_parameters(pars, cov_mat)
 }
 \arguments{
 \item{pars}{model parameters}
+
+\item{cov_mat}{covariance matrix}
 }
 \description{
 Parameter proposals

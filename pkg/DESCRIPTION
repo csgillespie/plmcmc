@@ -11,9 +11,9 @@ Description: This package fits power laws using the method described by
 License: GPL-2 | GPL-3
 Roxygen: list(wrap = FALSE)
 Depends:
-    R (>= 3.0.0)
+    R (>= 3.0.0),
+    MASS
 Suggests:
     beepr
 Imports:
-    MASS,
     poweRlaw

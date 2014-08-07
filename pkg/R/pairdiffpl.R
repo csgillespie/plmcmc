@@ -53,7 +53,7 @@ check_pars_length.pairdiffpl = function(pars, ...) {
 
 
 #' @export
-plot_mcmc.pairdiffpl = function(output, x=1:100) {
+plot_mcmc.pairdiffpl = function(output, x=1:100, ...) {
   
   op = par(mfrow=c(2, 2), ask=TRUE)
   for(i in 1:8) {

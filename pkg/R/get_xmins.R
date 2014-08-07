@@ -1,3 +1,8 @@
+#' Xmin inference
+#' 
+#' @param thetas Matrix of parameters. Typically posterior samples
+#' @param x Values of x to scan
+#' @param upper arg min cut-off. Default 0.99
 #' @export
 get_xmins = function(thetas, x, upper =0.99) {
   cut_off = matrix(0, ncol=length(x), 

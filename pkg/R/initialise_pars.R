@@ -1,3 +1,7 @@
+#' Initialise parameter values for the MCMC algorithm
+#' 
+#' @param pars A vector of initial parameter values
+#' @param type A string indicating the model to be fitted
 #' @export
 initialise_pars = function(pars, 
                            type=c("displ", "dislnorm", "disexp", 

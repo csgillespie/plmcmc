@@ -1,4 +1,3 @@
-#' @export
 ll = function(pars, freq_values, kern,...){
   if(!check_pars_range(pars)) 
     return(-Inf)

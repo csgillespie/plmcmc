@@ -22,6 +22,8 @@ power law distribution, we don't need a difference kernel. Otherwise, a function
 
 \item{verbose}{default \code{TRUE}. On verbose mode, 1 in 100 iterations and the acceptance
 rate will be printed to the screen.}
+
+\item{...}{Additional arguments that will be passed to the likelihood function.}
 }
 \value{
 A matrix

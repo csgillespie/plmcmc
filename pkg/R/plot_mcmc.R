@@ -2,11 +2,16 @@ get_means = function(output) {
     colMeans(output)
 }
 
-
+#' Plot of MCMC output
+#' 
+#' @param output A matrix obtained from the \code{mcmc} method. 
+#' @param ... Additional arguments
 #' @export
 plot_mcmc = function(output, ...) UseMethod("plot_mcmc")
+
+#' @aliases plot_mcmc
 #' @export
-plot_mcmc.diff = function(output, x=1:100) {
+plot_mcmc.diff = function(output, x=1:100, ...) {
   
   op = par(mfrow=c(3, 2))
   on.exit(par(op))
@@ -34,7 +39,7 @@ plot_mcmc.diff = function(output, x=1:100) {
  
 }
 #' @export
-plot_mcmc.difflnorm = function(output, x=1:100) {
+plot_mcmc.difflnorm = function(output, x=1:100, ...) {
   
   op = par(mfrow=c(3, 2))
   
@@ -61,7 +66,7 @@ plot_mcmc.difflnorm = function(output, x=1:100) {
 
 
 #' @export
-plot_mcmc.diffsq = function(output, x=1:100) {
+plot_mcmc.diffsq = function(output, x=1:100, ...) {
   
   op = par(mfrow=c(3, 2))
   
@@ -90,7 +95,7 @@ plot_mcmc.diffsq = function(output, x=1:100) {
 }
 
 #' @export
-plot_mcmc.displ = function(output) {
+plot_mcmc.displ = function(output, ...) {
   
   op = par(mfrow=c(1, 2))
   
@@ -104,7 +109,7 @@ plot_mcmc.displ = function(output) {
 }
 
 #' @export
-plot_mcmc.dislnorm = function(output) {
+plot_mcmc.dislnorm = function(output, ...) {
   
   op = par(mfrow=c(1, 3))
   
@@ -121,7 +126,7 @@ plot_mcmc.dislnorm = function(output) {
 }
 
 #' @export
-plot_mcmc.dislnormpl = function(output) {
+plot_mcmc.dislnormpl = function(output, ...) {
   
   op = par(mfrow=c(2, 3))
   

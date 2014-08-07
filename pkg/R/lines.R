@@ -1,5 +1,13 @@
+#' Fitted lines
+#' 
+#' Adds the fitted to a plot
+#' @param x Output from the \code{mcmc} function
+#' @param xmax Maximum x value to plot 
+#' @param n The number of samples from \code{x} to plot
+#' @param ... Additional lines arguments
+#' @method lines plmcmc_mat
 #' @export
-lines.plmcmc_mat = function(x, xmax, n=NULL, ...) {
+lines.plmcmc_mat = function(x, xmax=1e4, n=NULL, ...) {
   x_mcmc = x[,-1, drop=FALSE]
   if(is.null(n)) {
     x_mcmc = t(as.matrix(colMeans(x_mcmc)))
@@ -18,10 +26,11 @@ lines.plmcmc_mat = function(x, xmax, n=NULL, ...) {
   return(x)
 }
 
+#' @rdname lines.plmcmc_mat
+#' @method lines diff
 #' @export
-lines.diff = function(x, xmax, n,...) {
+lines.diff = function(x, xmax=1e4, n,...) {
   kern = attr(x, "kern")
-  xmax = 1e4
   x_seq = 1:xmax
   pars = x
   alpha = pars[1L]; l1 = pars[2L]; l2 = pars[3L]; l3 = pars[4L];
@@ -31,8 +40,6 @@ lines.diff = function(x, xmax, n,...) {
   probs = kern(l1 + l2*(x_seq-1) + l3*(x_seq-1)^2)*dpldis(x_seq, 1, alpha)
   probs = probs/constant
   
-
-
   ## Add on the part of the pdf not covered in the search space
   ## Then drop it from plotting
   p = c(probs, 1 - sum(probs))
@@ -44,6 +51,8 @@ lines.diff = function(x, xmax, n,...) {
   return(invisible(data.frame(x=x_seq, y=cdf)))
 }
 
+#' @rdname lines.plmcmc_mat
+#' @method lines difflnorm
 #' @export
 lines.difflnorm = function(x, xmax, n,...) {
   x_seq = 1:xmax
@@ -65,6 +74,8 @@ lines.difflnorm = function(x, xmax, n,...) {
   return(invisible(data.frame(x=x_seq, y=cdf)))
 }
 
+#' @rdname lines.plmcmc_mat
+#' @method lines dislnorm
 #' @export
 lines.dislnorm = function(x, xmax, n, ...) {
   x_seq = floor(seq(1, xmax, length.out=4))
@@ -73,6 +84,8 @@ lines.dislnorm = function(x, xmax, n, ...) {
   return(lines(obj, ...))
 }
 
+#' @rdname lines.plmcmc_mat
+#' @method lines displ
 #' @export
 lines.displ = function(x, xmax, n, ...) {
   x_seq = floor(seq(1, xmax, length.out=4))
@@ -81,7 +94,9 @@ lines.displ = function(x, xmax, n, ...) {
   lines(obj, ...)
 }
 
-
+#' @rdname lines.plmcmc_mat
+#' @method lines dislnormpl
+#' @export
 lines.dislnormpl = function(x, xmax, n, ...) {
   ## Plot the data
   x_seq = 1:xmax
