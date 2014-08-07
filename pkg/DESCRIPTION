@@ -1,12 +1,13 @@
 Package: plmcmc
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
-Date: 2014-02-12
+Title: A complete data frame work for fitting power law distributions
+Version: 0.1
+Date: 2014-06-06
 Authors@R: person(given="Colin", family="Gillespie",
     email="csgillespie@gmail.com", role = c("aut", "cre"))
 Maintainer: Colin Gillespie <csgillespie@gmail.com>
-Description: More about what it does (maybe more than one line)
+Description: This package fits power laws using the method described by
+    Gillespie, 2014.
 License: GPL-2 | GPL-3
 Roxygen: list(wrap = FALSE)
 Depends:
