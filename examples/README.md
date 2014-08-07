@@ -2,7 +2,7 @@ Examples
 =========
 
 The examples in this directory can all be run using the R `plmcmc` package. 
-However, you may need to download the data sets separately and add them to the directory `inputs` (which you will have to create.)
+However, you will need to download some of the data sets separately and add them to the directory `input/` (which you will have to create).
 
 1. Citations: Download the data from author's [website](http://physics.bu.edu/~redner/projects/citation/isi.html)
 1. Github: Download the data from author's [website](https://github.com/blog/466-the-2009-github-contest)
@@ -14,3 +14,4 @@ However, you may need to download the data sets separately and add them to the d
 1. Swiss-Prot: Contained within the [poweRlaw](https://github.com/csgillespie/poweRlaw) package;
 `data(swiss_prot)`
 
+The output from the MCMC runs is stored in the `output`. 
