@@ -13,7 +13,7 @@ Roxygen: list(wrap = FALSE)
 Depends:
     R (>= 3.0.0)
 Suggests:
-    pingr
+    beeper
 Imports:
     MASS,
     poweRlaw

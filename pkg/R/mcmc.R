@@ -30,6 +30,7 @@ get_freq_and_values = function(x, ...) {
 #' \code{exp_cdf}
 #' @param verbose default \code{TRUE}. On verbose mode, 1 in 100 iterations and the acceptance 
 #' rate will be printed to the screen.
+#' @param ... Additional arguments that will be passed to the likelihood function.
 #' @return A matrix
 #' @export
 mcmc = function(pars, cov_mat, data, N, 
@@ -66,7 +67,7 @@ mcmc = function(pars, cov_mat, data, N,
   class(output) = c("plmcmc_mat", class(output))
   attr(output, "kern") = kern
   
-  if(verbose && require("pingr")) ping(6)
+  if(verbose && require("beepr")) beep(6)
   return(output)
 }
 
