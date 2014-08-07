@@ -2,7 +2,9 @@ plmcmc
 ======
 [![Build Status](https://travis-ci.org/csgillespie/plmcmc.png?branch=master)](https://travis-ci.org/csgillespie/plmcmc)
 
-This is an R package that accompanys the paper XXX. 
+This is an R package that accompanys the paper
+
+> Gillespie, C.S. *A complete data frame work for fitting power law distributions*. 2014
 
 Overview of the repository
 --------------------------
