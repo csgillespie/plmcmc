@@ -4,7 +4,7 @@ plmcmc
 
 This is an R package that accompanys the paper
 
-> Gillespie, C.S. *A complete data frame work for fitting power law distributions*. 2014
+> Gillespie, C.S. *A complete data frame work for fitting power law distributions*. 2014 [arXiv](http://arxiv.org/abs/1408.1554)
 
 Overview of the repository
 --------------------------
@@ -29,7 +29,7 @@ Note: Windows users have to first install [Rtools](http://cran.rstudio.com/bin/w
 Examples
 -------------
 
-All examples mentioned in the paper are located in the `examples` directory. See [examples/README](examples/README.md) file for details getting the data and running the examples.
+All examples mentioned in the [paper](http://arxiv.org/abs/1408.1554) are located in the `examples` directory. See [examples/README](examples/README.md) file for details getting the data and running the examples.
 
 Issues
 -------
