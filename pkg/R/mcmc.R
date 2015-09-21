@@ -39,7 +39,7 @@ mcmc = function(pars, cov_mat, data, N,
   freq_values = get_freq_and_values(data, ...)
   log_ll_cur = ll(pars, freq_values, kern=kern, ...)
   prior_cur = get_prior(pars_cur)
-  
+
   output = get_output_matrix(pars, N/thin)
   output[1,] = c(log_ll_cur, pars_cur)
   accept = 0

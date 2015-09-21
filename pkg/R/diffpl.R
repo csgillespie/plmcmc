@@ -26,7 +26,7 @@ get_prior.diff = function(pars, ...) {
 }
 
 check_pars_range.diff = function(pars, is_mcmc=TRUE, ...) {
-  if(is_mcmc) return(pars[1L] > 1 && all(pars[2:4] > 0))
+  if(is_mcmc) return(pars[1L] > 1 && all(pars[2:4] >= 0))
   
   if(pars[1L] < 1) stop("First parameter must be greater than 1")
   if(any(pars[3:4] < 0)) stop("All scaling parameters must be non-negative")
